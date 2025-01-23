@@ -1,5 +1,5 @@
 # region imports
-#JES MISSING CODE
+import Die.rollFairDie() as rfd
 
 # endregion
 
@@ -10,12 +10,12 @@ def main():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-    scores = #JES MISSING CODE  # create a list with 6 elements/items initialized to 0's
-    n = #JES MISSING CODE  # how many times to roll the die
-    for i in range(n):  # each time through the loop, roll die and increment a score
+    scores = [0,0,0,0,0,0] #JES MISSING CODE  # create a list with 6 elements/items initialized to 0's
+    n = 1000  # how many times to roll the die
+    for i in range(1,7,1):  # each time through the loop, roll die and increment a score
         score = Die.rollFairDie()  # score = 1 to 6
-        scores[#JES MISSING CODE] += 1  # increment score-1 item b/c 0 indexing start
-    # print the result
+        scores[1,2,3,4,5,6] += 1  # increment score-1 item b/c 0 indexing start
+     print(score)
     #JES MISSING CODE
 
 
@@ -25,7 +25,12 @@ def main2():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-    #JES MISSING CODE
+    scores = [0,0,0,0,0,0]
+    n = 10000
+    for i in range(1,7,1):
+        score = Die.rollFairDie()
+        scores[] += 1
+     print(score)
     pass
 
 
@@ -35,7 +40,12 @@ def main3():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-    #JES MISSING CODE
+   scores = [0,0,0,0,0,0]
+   n = 10000
+   for i in range(1,7,1):
+       score = Die.rollUnfairDie()
+       scores[] +- 1
+    print(score)
     pass
 
 
