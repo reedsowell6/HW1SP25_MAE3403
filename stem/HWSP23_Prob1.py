@@ -1,5 +1,8 @@
 # region imports
-import Die.rollFairDie() as rfd
+from Die import rollFairDie as rfd
+from Die import rollUnFairDie as rufd
+
+
 
 # endregion
 
@@ -10,14 +13,19 @@ def main():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-    scores = [0,0,0,0,0,0] #JES MISSING CODE  # create a list with 6 elements/items initialized to 0's
-    n = 1000  # how many times to roll the die
-    for i in range(1,7,1):  # each time through the loop, roll die and increment a score
-        score = Die.rollFairDie()  # score = 1 to 6
-        scores[1,2,3,4,5,6] += 1  # increment score-1 item b/c 0 indexing start
-     print(score)
-    #JES MISSING CODE
+    def rfd_1(n): #defining the function rfd
+        scores = [0] * 6 # create a list with 6 elements/items initialized to 0's
+        for _ in range(n):  # each time through the loop, roll die and increment a score
+            score = rfd()  # score = 1 to 6
+            scores[score - 1] += 1  # increment score-1 item b/c 0 indexing start
 
+        for i in range(6):
+            probability = scores[i] / n
+            print(f"Probability of rolling a {i + 1}: {probability:.4f}")
+
+    rfd_1(1000) # Call the function with 1000 rolls
+
+    pass
 
 def main2():
     """
@@ -25,12 +33,17 @@ def main2():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-    scores = [0,0,0,0,0,0]
-    n = 10000
-    for i in range(1,7,1):
-        score = Die.rollFairDie()
-        scores[] += 1
-     print(score)
+    def rfd(n):
+        scores = [0] * 6
+        for _ in range(n): # N times loop (10000)
+            score = Die.rollFairDie()
+            scores[score - 1] += 1
+
+        for i in range(6):
+            probability = scores[i] / n
+            print(f"Probability of rolling a {i + 1}: {probability:.4f}")
+
+    rfd(10000)
     pass
 
 
@@ -40,12 +53,18 @@ def main3():
     it calculates and outputs the probability of each possible score.
     :return: nothing
     """
-   scores = [0,0,0,0,0,0]
-   n = 10000
-   for i in range(1,7,1):
-       score = Die.rollUnfairDie()
-       scores[] +- 1
-    print(score)
+    def rufd(n): # Call unfair die roll function
+        scores = [0] * 6
+        for _ in range(n): # Loop n 10000 times
+            score = Die.rollUnfairDie()
+            scores[score - 1] +- 1
+        print(scores)
+
+        for i in range(6):
+            probability = scores[i] / n
+            print(f"Probability of rolling a {i + 1}: {probability:.4f}")
+
+    rufd(10000)
     pass
 
 
@@ -56,3 +75,5 @@ if __name__ == "__main__":
     main()
     main2()
     main3()
+
+# ChatGPT was used to create/format this code

@@ -17,17 +17,17 @@ def rollFairDie():
     import random
     x = random.random() #JES MISSING CODE  # should be a floating point number between 0.0 and 1.0
     if (x <= 1.0/6):
-     print(1)
+     return 1
     elif (x <= 2.0/6):
-     print(2)
+     return 2
     elif (x <= 3.0/6):
-     print(3)
+     return 3
     elif (x <= 4.0/6):
-     print(4)
+     return 4
     elif (x <= 5.0/6):
-     print(5)
+     return 5
     elif (x <= 6.0/6):
-     print(6)
+     return 6
 
 
 def rollUnFairDie():
@@ -39,17 +39,17 @@ def rollUnFairDie():
     import random
     x = random.random()
     if (x <= 1.0/5):
-     print(1)
+     return 1
     elif (x <= 1.8/5):
-     print(2)
+     return 2
     elif (x <= 2.6/5):
-     print(3)
+     return 3
     elif (x <= 3.4/5):
-     print(4)
+     return 4
     elif (x <= 4.2/5):
-     print(5)
+     return 5
     elif (x <= 5.0/5):
-     print(6)
+     return 6
 
 # endregion
 
